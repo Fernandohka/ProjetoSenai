@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Controle de estoque</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.3/xlsx.full.min.js"></script>
 </head>
 <body>
     <a href="../Menu/page.html">VOLTAR</a>
@@ -15,15 +16,33 @@
     <div>
         <input type="text" placeholder="Nome do produto" id="nome">
         <br><br>
-        <input type="text" placeholder="Valor do produto" id="valor">
+        <input type="number" placeholder="Valor do produto" id="valor">
         <br><br>
-        <input type="text" placeholder="Quantidade" id="quantidade">
+        <input type="number" placeholder="Quantidade" id="quantidade">
         <br><br>
 
     </div>
     <div>
         <button onclick="adicionarItem()">💀</button>
     </div>
+    <br>
+    <div>
+        <table id="tabela">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Valor</th>
+                    <th>Quantidade</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+    </div>
+    <div>
+        <button onclick="exportarParaExcel()">Gerar Tabela</button>
+    </div>
+    <script src="script.js"></script>
 
 </body>
 </html>
